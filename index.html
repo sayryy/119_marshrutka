@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#15191f">
+<meta name="description" content="119 маршрутка: Полювання на зайців — безкоштовна браузерна гра.">
+<title>119 Маршрутка — Полювання на зайців</title>
+<style>
+:root{--bg:#15191f;--panel:#222a34;--yellow:#ffd21a;--text:#f5f1e8;--muted:#b8c0ca}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 50% -15%,#394352 0,#15191f 48%);color:var(--text);font-family:system-ui,Arial,sans-serif}
+header{position:sticky;top:0;z-index:5;background:#15191feF;border-bottom:1px solid #ffffff18;backdrop-filter:blur(12px)}
+nav{max-width:1100px;margin:auto;padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:950;letter-spacing:.4px;color:var(--yellow);font-size:18px}
+nav a{color:var(--text);text-decoration:none;margin-left:16px;font-weight:700;font-size:14px}
+main{max-width:1100px;margin:auto;padding:0 20px}
+.hero{text-align:center;padding:64px 12px 38px}
+.tag{display:inline-block;border:1px solid #ffd21a66;color:var(--yellow);border-radius:99px;padding:6px 12px;font-size:12px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(36px,7vw,68px);line-height:.98;margin:18px auto 14px;max-width:850px;font-weight:1000;letter-spacing:-2px}
+h1 span{color:var(--yellow)}
+.hero p{max-width:620px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.6}
+.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:25px}
+.btn{border:0;border-radius:12px;padding:14px 22px;background:var(--yellow);color:#17191d;font-weight:950;font-size:16px;text-decoration:none;cursor:pointer}
+.btn.alt{background:#303946;color:var(--text);border:1px solid #ffffff20}
+.gamebox{margin:20px auto 52px;background:#0c0f13;border:1px solid #ffffff20;border-radius:20px;overflow:hidden;box-shadow:0 24px 80px #0008}
+.gamehead{padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#222a34}
+.gamehead strong{color:var(--yellow)}
+.gamehead small{color:var(--muted)}
+.framewrap{height:min(82vh,850px);min-height:580px;background:#1d2128}
+iframe{width:100%;height:100%;border:0;display:block;background:#1d2128}
+section.info{padding:10px 0 48px}
+h2{font-size:30px;margin:0 0 18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:linear-gradient(145deg,#27313d,#1e252e);border:1px solid #ffffff15;border-radius:16px;padding:20px}
+.card b{display:block;color:var(--yellow);font-size:18px;margin-bottom:7px}
+.card p,.note{color:var(--muted);line-height:1.55;margin:0}
+.controls{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.control{padding:13px 15px;background:var(--panel);border-radius:12px;color:var(--muted)}
+kbd{display:inline-block;background:#111820;border:1px solid #ffffff30;border-radius:6px;padding:2px 7px;color:var(--yellow);font-weight:800}
+footer{border-top:1px solid #ffffff18;text-align:center;padding:25px;color:var(--muted);font-size:13px}
+@media(max-width:700px){nav{padding:12px 14px}nav a{margin-left:9px;font-size:12px}.brand{font-size:15px}.hero{padding-top:48px}.cards{grid-template-columns:1fr}.framewrap{height:78vh;min-height:540px}.gamehead small{display:none}.controls{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><nav>
+  <div class="brand">🚐 119 МАРШРУТКА</div>
+  <div><a href="#play">Грати</a><a href="#about">Про гру</a><a href="#controls">Керування</a></div>
+</nav></header>
+<main>
+  <section class="hero">
+    <div class="tag">БЕЗКОШТОВНА БРАУЗЕРНА ГРА</div>
+    <h1>ПОЛЮВАННЯ <span>НА ЗАЙЦІВ</span></h1>
+    <p>Маршрутка вже вирушила. Дорога нескінченна, зайці хитрі, а твоя задача — зібрати якомога більше монет і встановити рекорд.</p>
+    <div class="actions">
+      <a class="btn" href="#play">▶ ГРАТИ ЗАРАЗ</a>
+      <button class="btn alt" id="share">↗ Поділитися з друзями</button>
+    </div>
+  </section>
+
+  <section class="gamebox" id="play">
+    <div class="gamehead"><strong>🚐 119 Маршрутка: Полювання на зайців</strong><small>Гра запускається прямо на цій сторінці</small></div>
+    <div class="framewrap"><iframe src="game.html" title="Гра 119 Маршрутка" allow="fullscreen"></iframe></div>
+  </section>
+
+  <section class="info" id="about">
+    <h2>Що тут робити?</h2>
+    <div class="cards">
+      <article class="card"><b>🪝 Лови зайців</b><p>Користуйся гарпуном, щоб ловити зайців і заробляти монети.</p></article>
+      <article class="card"><b>⚓ Керуй маршруткою</b><p>Маневруй між перешкодами, гальмуй якорем і не дай маршрутці зламатися.</p></article>
+      <article class="card"><b>🛠 Покращуй транспорт</b><p>За монети купуй покращення в гаражі та намагайся побити власний рекорд.</p></article>
+    </div>
+  </section>
+
+  <section class="info" id="controls">
+    <h2>Керування</h2>
+    <div class="controls">
+      <div class="control"><kbd>◀</kbd> <kbd>▶</kbd> — рух ліворуч і праворуч</div>
+      <div class="control"><kbd>Пробіл</kbd> — гарпун</div>
+      <div class="control"><kbd>↓</kbd> — якір</div>
+      <div class="control"><kbd>E</kbd> — оглушувальна хвиля</div>
+      <div class="control"><kbd>H</kbd> — сигнал</div>
+      <div class="control"><kbd>P</kbd> / <kbd>Esc</kbd> — пауза</div>
+    </div>
+    <p class="note" style="margin-top:14px">На телефоні використовуй кнопки на екрані. Прогрес і рекорд зберігаються в браузері на твоєму пристрої.</p>
+  </section>
+</main>
+<footer>119 Маршрутка: Полювання на зайців · Фанова гра для друзів</footer>
+<script>
+document.getElementById('share').addEventListener('click', async () => {
+  const data = {title: document.title, text: 'Заходь пограти в 119 Маршрутка: Полювання на зайців!', url: location.href};
+  try {
+    if (navigator.share) await navigator.share(data);
+    else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); alert('Посилання скопійовано!'); }
+    else prompt('Скопіюй посилання на сайт:', location.href);
+  } catch(e) {}
+});
+</script>
+</body>
+</html>
